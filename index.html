@@ -30,9 +30,6 @@
           </div>
         </div>
 
-        <!-- scroll-line -->
-        <div class="scroll-line"></div>
-
         <!-- chat-list -->
         <div class="chatlist">
           <div class="block active">
@@ -182,17 +179,21 @@
       </div>
 
       <div class="rightSide">
-        <div class="header">
-          <div class="imgText">
-            <div class="userimg">
-              <img src="./images/img8.jpg" class="cover" alt="" />
+        <div class="wrap">
+          <div class="header">
+            <div class="imgText">
+              <div class="userimg">
+                <img src="./images/img8.jpg" class="cover" alt="" />
+              </div>
+              <h4>Muhammad Shayan<br /><span>online</span></h4>
             </div>
-            <h4>Muhammad Shayan<br /><span>online</span></h4>
+            <ul class="nav_icons">
+              <li><ion-icon name="search-outline"></ion-icon></li>
+              <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+            </ul>
           </div>
-          <ul class="nav_icons">
-            <li><ion-icon name="search-outline"></ion-icon></li>
-            <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-          </ul>
+          <!-- scroll-line -->
+          <div class="scroll-line"></div>
         </div>
 
         <!-- chatbox -->
@@ -282,10 +283,10 @@
     ></script>
     <script>
       $(document).ready(function () {
-        $(window).scroll(function () {
-          var windowTop = $(window).scrollTop(),
-            documentHeight = $(document).height(),
-            windowHeight = $(window).height();
+        $(".chatBox").scroll(function () {
+          var windowTop = $(".chatBox").scrollTop(),
+            documentHeight = $(document, ".chatBox").height(),
+            windowHeight = 232.5;
           var scroll = (windowTop / (documentHeight - windowHeight)) * 100;
           $(".scroll-line").css("width", scroll + "%");
         });

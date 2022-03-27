@@ -52,6 +52,12 @@ body {
   background: url("./images/bgimg.png");
 }
 
+.wrap {
+  position: relative;
+  width: 100%;
+  background-color: #ededed;
+}
+
 .header {
   position: relative;
   width: 100%;
@@ -134,12 +140,6 @@ body {
   position: relative;
   height: calc(100% - 113px);
   overflow-y: auto;
-}
-
-.scroll-line {
-  height: 3px;
-  width: 0%;
-  background: #009688;
 }
 
 .chatlist::-webkit-scrollbar {
@@ -259,7 +259,7 @@ body {
 .chatBox {
   position: relative;
   width: 100%;
-  height: calc(100% - 120px);
+  height: calc(100% - 123px);
   padding: 50px;
   overflow-y: auto;
 }
@@ -377,4 +377,9 @@ body {
   outline: none;
   border-radius: 30px;
   font-size: 1em;
+}
+.scroll-line {
+  height: 3px;
+  width: 0%;
+  background: #009688;
 }
